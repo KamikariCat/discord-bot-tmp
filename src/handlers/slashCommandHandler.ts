@@ -1,0 +1,3 @@
+export function slashCommandHandler(/*command: ChatInputCommandInteraction*/) {
+    // code...
+}
