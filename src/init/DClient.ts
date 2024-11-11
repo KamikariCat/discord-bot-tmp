@@ -6,7 +6,8 @@ export const DClient = new Client({
     intents:
         GatewayIntentBits.Guilds |
         GatewayIntentBits.GuildMessages |
-        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.MessageContent |
+        GatewayIntentBits.GuildIntegrations,
 });
 
 DClient.login(process.env.TOKEN || '')

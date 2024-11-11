@@ -1,5 +1,5 @@
 export function Log(value: string) {
-    if (!process.env.TOKEN) {
+    if (!process.env.DEV) {
         return;
     }
 
