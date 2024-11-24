@@ -1,8 +1,10 @@
-export function Log(value: string) {
+export function Log(value: any, isError = false) {
     if (!process.env.DEV) {
         return;
     }
 
     // eslint-disable-next-line
-    console.log(value);
+    if (isError) console.log(value);
+    // eslint-disable-next-line
+    else console.error(value);
 }

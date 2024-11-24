@@ -5,7 +5,7 @@ import { DClient } from './init/DClient';
 DClient.once('ready', (client) => {
     client.on('interactionCreate', (interaction) => {
         if (interaction instanceof ChatInputCommandInteraction) {
-            slashCommandHandler();
+            slashCommandHandler(interaction);
         }
     });
 });
