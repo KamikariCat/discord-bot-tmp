@@ -1,5 +1,5 @@
 import { ButtonInteraction } from 'discord.js';
-import { Buttons } from '../ commands/components/buttons';
+import { Buttons } from '../components/buttons';
 import { Log } from '../tools/logger';
 
 export function buttonHandler(buttonInteraction: ButtonInteraction) {

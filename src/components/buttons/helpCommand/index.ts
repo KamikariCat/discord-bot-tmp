@@ -1,7 +1,7 @@
 import { ButtonBuilder, ButtonStyle } from 'discord.js';
-import { CommandName } from '../../../config';
-import { ButtonHanlderType } from './../types';
-import { Log } from '../../../../tools/logger';
+import { CommandName } from '../../../ commands/config';
+import { ButtonHanlderType } from '../types';
+import { Log } from '../../../tools/logger';
 
 export const buttonNames = {
     okay: `${CommandName.helpie}_okay`,
