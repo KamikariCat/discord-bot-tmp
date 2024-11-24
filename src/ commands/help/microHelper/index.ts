@@ -1,6 +1,6 @@
-import { Log } from '../../../tools/logger';
 import { CommandName } from '../../config';
 import { Subcommand } from '../../types';
+import exec from './exec';
 
 export const microHelper: Subcommand = {
     name: CommandName.helpie,
@@ -11,7 +11,5 @@ export const microHelper: Subcommand = {
         );
         return builder;
     },
-    exec: async function (command) {
-        Log('SUB' + command.commandName);
-    },
+    exec,
 };
