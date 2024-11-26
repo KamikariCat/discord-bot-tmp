@@ -12,5 +12,7 @@ export function buttonHandler(buttonInteraction: ButtonInteraction) {
         );
     }
 
-    buttonHandler.exec(buttonInteraction).catch((error) => Log(error, true));
+    buttonHandler
+        .exec(buttonInteraction)
+        .catch((error: Error) => Log(error, true));
 }

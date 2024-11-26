@@ -35,7 +35,7 @@
         "typescript-eslint": "^8.12.2"
     },
     "dependencies": {
-        "discord-api-types": "^0.37.103",
-        "discord.js": "^14.16.3"
+        "discord-api-types": "0.37.108",
+        "discord.js": "14.16.3"
     }
 }

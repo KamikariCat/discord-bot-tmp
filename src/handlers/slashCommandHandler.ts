@@ -1,5 +1,5 @@
 import { ChatInputCommandInteraction } from 'discord.js';
-import { CommandName, Commands } from '../ commands';
+import { CommandName, Commands } from '../commands';
 import { Log } from '../tools/logger';
 
 export function slashCommandHandler(command: ChatInputCommandInteraction) {
@@ -14,6 +14,7 @@ export function slashCommandHandler(command: ChatInputCommandInteraction) {
 
     if (command.commandName in CommandName) {
         const commandInstance = Commands[commandName as CommandName];
+
         if (!commandInstance) {
             Log([commandName, 'is not found'].join(' '), true);
         } else {

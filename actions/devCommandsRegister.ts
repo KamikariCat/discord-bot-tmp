@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { REST, Routes } from 'discord.js';
 import { Log } from '../src/tools/logger';
-import { CommandsList } from '../src/ commands';
+import { CommandsList } from '../src/commands';
 
 if (process.env.TOKEN === undefined || process.env.APP_ID === undefined) {
     throw new Error('MISSING .env DATA!!!');

@@ -1,6 +1,6 @@
 import { CommandName } from './config';
-import { help } from './help';
-import { microHelper } from './help/microHelper';
+import { help } from './slashes/help';
+import { microHelper } from './slashes/help/microHelper';
 import { Command, Subcommand } from './types';
 
 export * from './config';
