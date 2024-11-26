@@ -21,28 +21,48 @@ export type CommandExecFunction<T extends CommandInterraction> = (
     command: T
 ) => Promise<void>;
 
-export type Command = {
-    name: CommandName;
-    exec: CommandExecFunction<CommandInterraction>;
+export type BaseCommand<N, E> = {
+    name: N;
+    exec: E;
+    type:
+        | 'slash-command'
+        | 'slash-subcommand'
+        | 'message-context-command'
+        | 'user-context-command';
+};
+
+export type SlashCommand = BaseCommand<
+    CommandName,
+    CommandExecFunction<ChatInputCommandInteraction>
+> & {
+    type: 'slash-command';
     builder: SlashCommandBuilder | SlashCommandSubcommandBuilder;
 };
 
-export type Subcommand = {
-    name: CommandName;
+export type SlashSubcommand = BaseCommand<
+    CommandName,
+    CommandExecFunction<ChatInputCommandInteraction>
+> & {
+    type: 'slash-subcommand';
     builderCb: (
         builder: SlashCommandSubcommandBuilder
     ) => SlashCommandSubcommandBuilder;
-    exec: CommandExecFunction<CommandInterraction>;
 };
 
-export type MessageContextCommand = {
-    name: ContextCommandName;
+export type MessageContextCommand = BaseCommand<
+    ContextCommandName,
+    CommandExecFunction<MessageContextMenuCommandInteraction>
+> & {
+    type: 'message-context-command';
     builder: ContextMenuCommandBuilder;
-    exec: MessageContextMenuCommandInteraction;
 };
 
-export type UserContextCommand = {
-    name: ContextCommandName;
+export type UserContextCommand = BaseCommand<
+    ContextCommandName,
+    CommandExecFunction<UserContextMenuCommandInteraction>
+> & {
+    type: 'user-context-command';
     builder: ContextMenuCommandBuilder;
-    exec: UserContextMenuCommandInteraction;
 };
+
+export type Command = SlashCommand | MessageContextCommand | UserContextCommand;

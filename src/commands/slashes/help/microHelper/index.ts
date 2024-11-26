@@ -1,9 +1,10 @@
 import { CommandName } from '../../../config';
-import { Subcommand } from '../../../types';
+import { SlashSubcommand } from '../../../types';
 import exec from './exec';
 
-export const microHelper: Subcommand = {
+export const microHelper: SlashSubcommand = {
     name: CommandName.helpie,
+    type: 'slash-subcommand',
     builderCb(builder) {
         builder.setName(CommandName.helpie).setDescription('helpie cubcommand');
         builder.addBooleanOption((option) =>

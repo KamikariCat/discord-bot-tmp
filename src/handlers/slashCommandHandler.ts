@@ -16,8 +16,13 @@ export function slashCommandHandler(command: ChatInputCommandInteraction) {
         const commandInstance = Commands[commandName as CommandName];
 
         if (!commandInstance) {
-            Log([commandName, 'is not found'].join(' '), true);
-        } else {
+            return Log([commandName, 'is not found'].join(' '), true);
+        }
+
+        if (
+            commandInstance.type === 'slash-subcommand' ||
+            commandInstance.type === 'slash-command'
+        ) {
             commandInstance.exec(command);
         }
     }

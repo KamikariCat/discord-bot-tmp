@@ -10,6 +10,7 @@ builder.addSubcommand(microHelper.builderCb);
 
 export const help: Command = {
     builder,
+    type: 'slash-command',
     name: CommandName.help,
     exec: async function () {},
 };
