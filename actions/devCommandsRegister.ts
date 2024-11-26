@@ -27,7 +27,7 @@ async function run() {
         await rest.put(
             Routes.applicationGuildCommands(
                 process.env.APP_ID || '',
-                '306522072656510978'
+                process.env.DEV_SERVER || ''
             ),
             {
                 body: commands,
