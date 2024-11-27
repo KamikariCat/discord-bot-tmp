@@ -31,6 +31,7 @@ async function run() {
             ),
             {
                 body: commands,
+                //body: [],
             }
         );
 
