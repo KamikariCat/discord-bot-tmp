@@ -3,14 +3,14 @@ import { ContextCommandName } from '../../config';
 import { UserContextCommand } from '../../../tools/types';
 import { Log } from '../../../tools/logger';
 
-export const userCommand: UserContextCommand = {
-    name: ContextCommandName.user,
+export const showUserName: UserContextCommand = {
+    name: ContextCommandName.showUserName,
     type: 'user-context-command',
     builder: new ContextMenuCommandBuilder()
-        .setName(ContextCommandName.user)
+        .setName(ContextCommandName.showUserName)
         // @ts-ignore
         .setType(ApplicationCommandType.User),
     exec: async function (command) {
-        Log(command.commandName);
+        Log(command.targetMember?.user.username);
     },
 };

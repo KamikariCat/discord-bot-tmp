@@ -1,5 +1,5 @@
 import { CommandName } from '../../../config';
-import { SlashSubcommand } from '../../../types';
+import { SlashSubcommand } from '../../../../tools/types';
 import exec from './exec';
 
 export const microHelper: SlashSubcommand = {

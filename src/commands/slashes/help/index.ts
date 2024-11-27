@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from 'discord.js';
 import { CommandName } from '../../config';
-import { Command } from '../../types';
+import { Command } from '../../../tools/types';
 import { microHelper } from './microHelper';
 
 const builder = new SlashCommandBuilder();

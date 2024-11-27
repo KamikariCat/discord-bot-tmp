@@ -1,6 +1,6 @@
 import { ApplicationCommandType, ContextMenuCommandBuilder } from 'discord.js';
 import { ContextCommandName } from '../../config';
-import { MessageContextCommand } from '../../types';
+import { MessageContextCommand } from '../../../tools/types';
 import { Log } from '../../../tools/logger';
 
 export const messageCommand: MessageContextCommand = {

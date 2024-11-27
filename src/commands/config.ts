@@ -6,6 +6,5 @@ export enum CommandName {
 export enum ContextCommandName {
     user = 'user',
     message = 'message',
+    showUserName = 'showUserName',
 }
-
-export const CommandsConfig = {};
