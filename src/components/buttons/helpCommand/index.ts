@@ -1,6 +1,6 @@
 import { ButtonBuilder, ButtonStyle } from 'discord.js';
 import { CommandName } from '../../../commands/config';
-import { ButtonHanlderType } from '../types';
+import { ButtonHanlderType } from '../../../tools/types';
 import { Log } from '../../../tools/logger';
 
 export const buttonNames = {

@@ -1,5 +1,5 @@
 import { cancelButton, okayButton } from './helpCommand';
-import { ButtonHanlderType } from './types';
+import { ButtonHanlderType } from '../../tools/types';
 
 export const Buttons: Record<string, ButtonHanlderType> = {
     // Help command

@@ -8,7 +8,7 @@
         "commands-register": "ts-node ./actions/devCommandsRegister.ts",
         "lint": "eslint src",
         "format": "prettier --write \"src/**/*.ts\"",
-        "format:check": "prettier --write \"src/**/*.ts\""
+        "format:check": "prettier --check \"src/**/*.ts\""
     },
     "keywords": [
         "discord",
